@@ -1,0 +1,14 @@
+digraph FunctionCallGraph {
+	""a2.go:writeResultsToFile"" -> ""a2.go:writeResultsToFile"";
+	""a8.go:generateSubgraph"" -> ""a8.go:generateSubgraph"";
+	""a8.go:generateSubgraph"" -> ""a8.go:generateSubgraph"";
+	""a8.go:generateSubgraph"" -> ""a8.go:generateSubgraph"";
+	""a8.go:generateSubgraph"" -> ""a8.go:generateSubgraph"";
+	""a11.go:extractFunctionsAndCalls"" -> ""a11.go:extractFunctionsAndCalls"";
+	""a2.go:parseFile"" -> ""a2.go:parseFile"";
+	""a11.go:generateDotFile"" -> ""a11.go:generateDotFile"";
+	""a8.go:generateMethodSubgraph"" -> ""a8.go:generateMethodSubgraph"";
+	""a8.go:generateMethodSubgraph"" -> ""a8.go:generateMethodSubgraph"";
+	""a8.go:generateMethodSubgraph"" -> ""a8.go:generateMethodSubgraph"";
+	""a8.go:generateMethodSubgraph"" -> ""a8.go:generateMethodSubgraph"";
+}

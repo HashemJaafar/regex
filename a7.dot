@@ -1,0 +1,113 @@
+digraph G {
+    rankdir = LR;
+    
+    subgraph cluster_work_space {
+        label = "Work Space path";
+        bgcolor = lightblue;
+        
+        subgraph cluster_folder1 {
+            // some times will be folder inside folder
+            label = "folder1 name";
+            bgcolor = lightblue;
+            
+            subgraph cluster_file {
+                label = "file name";
+                bgcolor = lightblue;
+                "ws_function1";
+                "ws_function2";
+                
+                subgraph cluster_struct {
+                    label = "struct name";
+                    bgcolor = lightblue;
+                    "ws_method1";
+                    "ws_method2";
+                }
+            }
+        }
+    }
+    
+    subgraph cluster_third_party {
+        label = "Third Party Library";
+        bgcolor = lightgreen;
+        
+        subgraph cluster_folder1 {
+            // some times will be folder inside folder
+            label = "folder1 name";
+            bgcolor = lightgreen;
+            
+            subgraph cluster_file {
+                label = "file name";
+                bgcolor = lightgreen;
+                "tp_function1";
+                "tp_function2";
+                
+                subgraph cluster_struct {
+                    label = "struct name";
+                    bgcolor = lightgreen;
+                    "tp_method1";
+                    "tp_method2";
+                }
+            }
+        }
+    }
+    
+    subgraph cluster_standard {
+        label = "Standard Library";
+        bgcolor = lightyellow;
+        
+        subgraph cluster_folder1 {
+            // some times will be folder inside folder
+            label = "folder1 name";
+            bgcolor = lightyellow;
+            
+            subgraph cluster_file {
+                label = "file name";
+                bgcolor = lightyellow;
+                "std_function1";
+                "std_function2";
+                
+                subgraph cluster_struct {
+                    label = "struct name";
+                    bgcolor = lightyellow;
+                    "std_method1";
+                    "std_method2";
+                }
+            }
+        }
+    }
+    
+    subgraph cluster_builtin {
+        label = "Built-in";
+        bgcolor = lightgrey;
+        
+        subgraph cluster_folder1 {
+            // some times will be folder inside folder
+            label = "folder1 name";
+            bgcolor = lightgrey;
+            
+            subgraph cluster_file {
+                label = "file name";
+                bgcolor = lightgrey;
+                "builtin_function1";
+                "builtin_function2";
+                
+                subgraph cluster_struct {
+                    label = "struct name";
+                    bgcolor = lightgrey;
+                    "builtin_method1";
+                    "builtin_method2";
+                }
+            }
+        }
+    }
+    
+    // here all the functions calls
+    
+    "ws_function1" -> "ws_function2";
+    "tp_function1" -> "tp_function2";
+    "std_function1" -> "std_function2";
+    "builtin_function1" -> "builtin_function2";
+    "ws_function1" -> "tp_function1";
+    "ws_function1" -> "std_function1";
+    "tp_function2" -> "builtin_function1";
+}
